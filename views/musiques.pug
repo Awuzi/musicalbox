@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    .container
+        .container.mt-4
+            .row
+                .col-md-9
+                    header
+                        h1 Liste des musiques
+                    div
+                        if (musiqueslist)
+                            table.table
+                                thead
+                                    tr
+                                        th Nom du titre
+                                        th Auteur
+                                        th Genre
+                                tbody
+                                each obj in musiqueslist
+                                    tr
+                                        td
+                                            a(href='/musiques/' + obj.nom)= obj.nom
+                                        td= obj.auteur
+                                        td= obj.genre
+                        else
+                            h4(style='color: red;') Pas de musiques pour l'instant dans la
+
+                .col-md-3
+                    .filter
+                        h2.h2 New song
+                        hr
+                        form(name='addmusic' method='post' action='../musiques/upload' enctype='multipart/form-data' class='form')
+                            .col
+                                label.sr-only(for='auteur')
+                                input#auteur.form-control(type='text' name='auteur' placeholder="Auteur" required='' autofocus='')
+                            br
+                            .col
+                                label.sr-only(for='genre')
+                                input#genre.form-control(type='text' name='genre' placeholder="Genre" required='')
+                            br
+                            .col
+                                .custom-file
+                                    label.custom-file-label(for='upload') Choose file
+                                    input#upload.custom-file-input(type='file' name='upload' required='' autofocus='')
+
+                                button.btn.btn-primary.mt-3(type='submit') Ajouter
+                        hr

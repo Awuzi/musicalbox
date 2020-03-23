@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+
+    article(id='top')
+        div.container
+            div.row
+                div(class='col-4 col-3-large col-12-medium')
+                    img(src='/images/musicalbox.png' alt='')
+                div(class='col-8 col-7-large col-12-medium')
+                    header
+                    if (message)
+                        h1.aln-center= message
+                    h1 MusicalBox
+                    p Une application NodeJS du BTS SIO
+                    a(href='https://www.vinsio.fr') www.vinsio.fr
+                    p
+                        ul#copyright
+                            li &copy; Untitled. All rights reserved. Design:
+                            li
+                                a(href="http://html5up.net") HTML5 UP

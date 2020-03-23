@@ -1,0 +1,24 @@
+doctype html
+html(lang='fr')
+    head
+        title= title
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, userscalable=no')
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
+    body.is-preload
+        nav.navbar.navbar-expand-lg.navbar-default.bg-dark
+            #navbarNav.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item.active
+                        a.nav-link(href='/') Accueil
+                    li.nav-item
+                        a.nav-link(href='/musiques') Musiques
+                    li.nav-item
+                        a.nav-link(href='/login') Connexion
+    block content
+    script(src='/assets/js/jquery.min.js')
+    script(src='/assets/js/jquery.scrolly.min.js')
+    script(src='/assets/js/browser.min.js')
+    script(src='/assets/js/breakpoints.min.js')
+    script(src='/assets/js/util.js')
+    script(src='/assets/js/main.js')

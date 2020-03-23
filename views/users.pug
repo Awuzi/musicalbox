@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    article(id='top' class='wrapper')
+        div.container
+            h2
+                table(style='width:100%' class='table')
+                    tr
+                        th login
+                        th pass
+                        th role
+                    each user in users
+                        tr
+                            td= user.login
+                            td= user.passe
+                            td= user.role

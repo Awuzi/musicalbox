@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    .container
+        .container-fluid.col-md-4
+            h1.h3.mb-3.font-weight-normal Connexion
+            form(method='post' action='/users')
+                .row
+                    .col
+                        label.sr-only(for='inputUsername') Username
+                        input#inputUsername.form-control(type='text', name='username', placeholder="Nom d'Utilisateur", required='', autofocus='')
+                    .col
+                        label.sr-only(for='inputPassword') Password
+                        input#inputPassword.form-control(type='password', name='password', placeholder='Mot de Passe', required='')
+                button.btn.btn-primary.mt-3(type='submit') Connexion
