@@ -37,7 +37,7 @@ router.get('/:titre', function(req, res, next) {
 });
 
 // Traitement pour la réception du fichier musical en asynchrone
-/* router.post('/upload', async function (req, res, next) {
+ router.post('/upload', async function (req, res, next) {
     try {
         // Si aucun fichier...
         if (req.files.upload.size == 0) {
@@ -72,7 +72,6 @@ router.get('/:titre', function(req, res, next) {
         res.status(500).send(err);
     }
 });
-*/
 
 // Traitement pour la reception du fichier musical
 router.post('/upload', async function(req, res, next) {
